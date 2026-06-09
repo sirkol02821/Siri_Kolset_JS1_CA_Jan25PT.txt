@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View the items in your cart" />
+  <title>Rainy Days - Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script src="https://kit.fontawesome.com/9afa3623fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="assets\images\logo-light.png" alt="logo of Rainy Days" class="logo"></a>
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="hamburger-icon"><i class="fas fa-bars"> M e n u </i></label>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="webshop.html">Shop</a>
+      <a href="about.html">About us</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact us</a>
+      <a href="cart.html" class="selected-page">Cart</a>
+    </nav>
+  </header>
+  <main>
+    <h1 class="page-title">Cart</h1>
+    <div class="cart-container">
+      <div class="cart-summary">
+        <div class="cart-order">
+            <img src="assets\images\product1.jpeg" alt="Cyclone coat front view" class="cart-image">
+            <section>
+                <li>Product: <strong>Cyclone coat</strong></li>
+                <li>Size: <strong>Medium</strong></li>
+                <li>Pieces: <strong>1</strong></li>
+                <li>Price: <strong>599,-</strong></li>
+            </section>
+        </div>
+        <div>
+          <div class="radio-shipping"> 
+            <h2>Choose shipping:</h2>
+            <div>
+              <input type="radio" name="shipping" value="ship-to-address" id="ship-to-address"/>
+              <label for="ship-to-address">to your door <strong>149,-</strong></label>
+            </div>
+            <div>
+              <input type="radio" name="shipping" value="ship-to-delivery" id="ship-to-delivery"/>
+              <label for="ship-to-delivery">to closest postal pick-up point <strong>99,-</strong></label>
+            </div>
+          </div>
+        </div>
+        <a href="webshop.html" class="primary-button">Continue shopping</a>
+      </div>
+      <div>
+        <form class="form-column">
+          <h2>Shipping information</h2>
+        <section class="form-shipping-info">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name"/>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="Email"/>
+          <h3>Shipping address</h3>
+          <label for="subject">Street name</label>
+          <input type="text" id="street"name="Street"/>
+          <label for="subject">House number</label>
+          <input type="text" id="house"name="House"/>
+          <label for="subject">Postal code</label>
+          <input type="text" id="postal"name="Postal"/>
+          <label for="subject">City</label>
+          <input type="text" id="city"name="City"/>
+          <label for="country">Choose country</label>
+          <select name="country" id="country">
+              <option value="Norway">Norway</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Finland">Finland</option>
+              <option value="Iceland">Iceland</option>
+          </select>
+        </section>
+        <a href="checkout.html" class="accent-button">Proceed to payment</a>
+      </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <section>
+      <ul>
+        <li><h3>About us</h3></li>
+        <li><h4><a href="about.html">About Rainy Days</a></h4></li>
+        <li><h4><a href="about.html">Our values and beliefs</a></h4></li>
+        <li><h4><a href="about.html">Certifications</a></h4></li>
+        <li><h4><a href="about.html">Product FAQ's</a></h4></li>
+        <li><h4><a href="about.html">Return policy</a></h4></li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li><h3>Contact us</h3></li>
+        <li><h4><a href="contact.html">Customer service</a></h4></li>
+        <li><h4><a href="community.html">Our community</a></h4></li>
+        <li><h2><a href="#"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-youtube"></i></a></li></h2>
+        <li>Follow us on social media and share your adventures!</li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li><img src="assets\images\logo-light.png" alt="logo of Rainy Days" class="logo"></li>
+        <li>Rainy days</li>
+        <li>Sunshine Alley 12,</li>
+        <li>1111 Rainbowville</li>
+        <li>contact@rainydays.com></li>
+        <li>815 493 00</li>
+      </ul>
+    </section>
+  </footer>
+</body>
