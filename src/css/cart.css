@@ -1,0 +1,79 @@
+/*    CART TAB    */
+.cartTab {
+  width: 400px;
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  border: solid 2px var(--color-tertiary);
+  position: fixed;
+  inset: 0 -400px 0 auto; /*hides cart (to the right of screen)*/
+  display:grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+body.showCart .cartTab{
+  inset: 0 0 0 auto;
+}
+
+.cartTab h1{
+  padding: 20px;
+  font-weight: normal;
+}
+.cartTab .btn {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.cartTab .btn button {
+  border:none;
+  background-color: var(--color-accent);
+  color: var(--color-tertiary);
+  font-weight: bold;
+  cursor: pointer;
+}
+.cartTab .btn .close{
+  background-color: var(--color-primary);
+}
+
+/* Dynamic cart item details*/
+.cartTab .listCart .item img {
+  width: 100%;
+}
+.cartTab .listCart .item {
+  display:grid;
+  grid-template-columns:70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+/*controls to increase and decrease items in cart*/
+.listCart .quantity span {
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  width:25px;
+  height: 25px;
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2){
+  background-color: transparent;
+  color: var(--color-primary);
+}
+/*setting different background colors if there are severeal items in cart*/
+.listCart .item:nth-child(even){
+  background-color: #104a58;
+}
+
+/* Scroll if list is "too long"  */ 
+.listCart{
+  overflow: auto;
+}
+/* Hide scrollbar  */
+.listCart::-webkit-scrollbar{
+  width:0;
+}

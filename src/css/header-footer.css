@@ -1,0 +1,104 @@
+nav {
+  width: 100%;
+  position: static;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--color-primary);
+  background: var(--gradient__black-dark);
+}
+.logo-cart {
+  width: 90%;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*    CART    */
+
+header .fa-shopping-cart {
+  font-size:30px;
+}
+header .icon-cart {
+  padding-top: 30px;
+  position: relative;
+}
+/* number indicator showing how much is in the cart */
+header .icon-cart span{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-accent);
+  color: var(--color-tertiary);
+  border-radius: 50%;
+  position: absolute;
+  top:10%;
+  right: -20px;
+}
+/* The CSS of the actual Cart tab is going to be in cart.css */
+
+
+nav a {
+  display: block;
+  color: var(--color-primary);
+  padding: 2px 20px;
+  text-decoration: none;
+}
+.navbar ul {
+  list-style: none;
+}
+nav li {
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*    FOOTER   */
+
+footer {
+  background: var(--gradient__dark-black);
+  color:var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100vw;
+}
+footer h3 {
+  text-decoration: underline;
+}
+footer h4 {
+  font-weight: normal;
+}
+footer a {
+  color: var(--color-primary);
+}
+footer ul li{
+  list-style-type: none;
+  text-align: center;
+  max-width: 250px;
+}
+
+@media (min-width: 600px){
+  nav ul {
+    padding: 0px;
+  }
+  footer {
+    flex-direction: row;
+  }
+}

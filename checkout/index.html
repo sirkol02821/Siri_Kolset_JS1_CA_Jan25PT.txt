@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Versatile, durable raincoats for men and women" />
+  <title>Rainy Days - Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <script src="https://kit.fontawesome.com/9afa3623fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id= "header">
+        <!-- header content from header-footer.js -->
+    </header>
+    <main>
+        <div class="loader">Loading...</div>
+        <h1>Checkout</h1>
+        <div id="checkout-items">
+            <!--Products from cart render here-->
+        </div>
+        <div class="order-summary" id="order-summary">
+            <h2>Order Summary</h2>
+            <p>Subtotal:<span id="subtotal">0 NOK</span></p>
+            <p>Shipping:<span id="shipping">99 NOK</span></p>
+            <p>Total:<span id="total">0 NOK</span></p>
+        </div>
+        <form id="checkout-form">
+            <div class="shipping-info">
+                <h2>Shipping information</h2>
+
+                <label for="fullname">Full name</label>
+                <input id="fullname" type="text" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="text" required>
+
+                <label for="address">Address</label>
+                <input id="address" type="text" required>
+
+                <label for="postal-code">Postal code</label>
+                <input id="postal-code" type="text" required>
+
+                <label for="city">City</label>
+                <input id="city" type="text" required>
+
+            </div>
+            <div class="payment-info">
+                <h2>Payment</h2>
+
+                <label>
+                    <input type="radio" name="payment" value="vipps" checked> Pay with Vipps
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="card"> Pay by Card
+                </label>
+
+                <div id="card-fields">
+                    <label for="card-number">Card Number</label>
+                    <input id="card-number" type="text" placeholder="1234 5678 912 3456">
+
+                    <label for="expiry">Expiry Date</label>
+                    <input id="expiry" type="text" placeholder="MM/YY">
+
+                    <label for="cvc">CVC</label>
+                    <input id="cvc" type="text" placeholder="123">
+
+                </div>
+            </div>
+            <button type="sumbit">Place Order</button>
+        </form>
+    </main>
+    <footer id="footer">
+        <!-- footer content from header-footer.js -->
+    </footer>
+    <script type="module" src="/scripts/main.js"></script>
+    <script type="module" src="/scripts/checkout.js"></script>
+</body>

@@ -4,13 +4,11 @@
 /* These are marked with an underscore: */
 @import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
-
-header, footer {
-  background-color: var(--color-tertiary);
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-}
+@import url("./header-footer.css");
+@import url("./loader.css");
+@import url("./product-list.css");
+@import url("./cart.css");
+@import url("./checkout.css");
 
 body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
@@ -29,67 +27,6 @@ main {
   margin: 0px 2rem 2rem 2rem;
   text-align: center;
 }
-
-footer {
-  flex-direction: column;
-  min-width: 100vw;
-}
-footer h3 {
-  text-decoration: underline;
-}
-footer h4 {
-  font-weight: normal;
-}
-
-nav, 
-#menu-checkbox {
-  display: none;
-  }
-
-#menu-checkbox:checked ~ nav {
-  display: block;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: var(--color-tertiary);
-    color: var(--color-primary);
-    padding: 10px;
-    font-size: 1.5rem;
-  }
-
-nav {
-  position: fixed;
-  align-self:baseline;
-  background: var(--color-primary);
-  border: 2px solid var(--color-tertiary);
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-nav a {
-  display: block;
-  color: var(--color-secondary);
-  padding: 10px 20px;
-}
-
-
-footer a {
-  color: var(--color-primary);
-}
-footer ul li{
-  list-style-type: none;
-  text-align: center;
-  max-width: 250px;
-}
-
-hr {
-  width: 50%;
-  height: 1px;
-  background-color: var(--color-secondary);
-}
  
 
 /* Universal */
@@ -103,16 +40,11 @@ input, select {
 
 
 
-
 /*  CLASSES  */
 
 .logo {
   max-width: 200px;
   padding: 10px 5px;
-}
-.hamburger-icon{
-  padding: 1rem;
-  font-family: Verdana;
 }
 
 .accent-button {
@@ -149,74 +81,6 @@ padding: 10px 30px;
   text-decoration: underline;
 }
 
-.fa-brands {
-  color: var(--color-primary)
-}
-
-
-.form-column {
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
-.form-column .accent-button {
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-
-/* Product listings */
-/** index page **/
-.featured {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 10px;
-}
-
-.featured h2, .secondary-button {
-  grid-column: -1/1;
-}
-
-.featured img {
-  width: 100%;
-  border-style: none;
-  border-radius: 5px;
-}
-
-.products {
-  grid-template-rows: auto;
-  grid-gap: 0px;
-  border: solid 2px var(--color-secondary);
-  border-radius: 5px;
-}
-.products h3 {
-  line-height: normal;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.products p {
-  display: inline-block;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding: 0px 10%;
-}
-.products .primary-button {
-  display:block;
-  width: 100%;
-}
-
-/*webshop page*/
-.webshop-layout {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 10px;
-}
-
-.webshop-layout img {
-  width: 100%;
-  border-style: none;
-  border-radius: 5px;
-}
 
 /* Checkbox-revealed content */
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Rainy Days, our values and beliefs, and read FAQ's" />
+  <title>Rainy Days - About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <script src="https://kit.fontawesome.com/9afa3623fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header id= "header">
+    <!-- header content from header-footer.js -->
+  </header>
+  <main>
+    <div class="loader">Loading...</div>
+    <h1 class="page-title">Contact us</h1>
+    <p>Get in touch with our customer service representatives by sending an email to contact@rainydays.com or use the form below.</p>
+    <form class="form-column">
+      <section class="form-narrow">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name"/>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="Email"/>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject"name="Subject"/>
+      </section>
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+    </form>
+    <div>
+      <input type="checkbox" id="checkbox-confirmation">
+      <label for="checkbox-confirmation"><i class="secondary-button">Submit query</i></label>
+      <div class="confirmation">
+          <h1>Thank you, your query has successfully been sent!</h1>
+          <h2>Your query is being processed and our team will be in touch with you within 1-2 working days.</h2>
+          <a href="/index.html" class="secondary-button">Back to homepage</a>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <!-- footer content from header-footer.js -->
+  </footer>
+  <script type="module" src="/scripts/main.js"></script>
+</body>

@@ -6,4 +6,7 @@
   --color-secondary: #446563;
   --color-tertiary: #0a3641;
   --color-accent: #6D9B55;
+  --gradient__black-dark: linear-gradient( black, var(--color-tertiary));
+  --gradient__dark-black: linear-gradient( var(--color-tertiary), black);
+  --gradienr__dark-mid: linear-gradient(var(--color-tertiary), var(--color-secondary));
 }

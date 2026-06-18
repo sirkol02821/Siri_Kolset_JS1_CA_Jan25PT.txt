@@ -8,25 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css">
   <script src="https://kit.fontawesome.com/9afa3623fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <a href="index.html"><img src="assets\images\logo-light.png" alt="logo of Rainy Days" class="logo"></a>
-    <input type="checkbox" id="menu-checkbox">
-    <label for="menu-checkbox" class="hamburger-icon"><i class="fas fa-bars"> M e n u </i></label>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="webshop.html">Shop</a>
-      <a href="about.html" class="selected-page">About us</a>
-      <a href="community.html">Community</a>
-      <a href="contact.html">Contact us</a>
-      <a href="cart.html">Cart</a>
-    </nav>
+  <header id= "header">
+    <!-- header content from header-footer.js -->
   </header>
   <main class="about">
-    <img src="assets\images\logo-slogan.png" alt="logo of Rainy Days with slogan: Pushing the comfort zone" class="about__logo">
+    <img src="/assets/images/logo-slogan.png" alt="logo of Rainy Days with slogan: Pushing the comfort zone" class="about__logo">
+    <div class="loader">Loading...</div>
     <div>
       <h1>About us</h1>
       <p>Our company is based on the old Norwegian saying <em>“There is no such thing as bad weather, there is only bad clothing”.</em></p>
@@ -72,35 +63,8 @@
       </ol>
     </div>
   </main>
-  <footer>
-    <section>
-      <ul>
-        <li><h3>About us</h3></li>
-        <li><h4><a href="about.html">About Rainy Days</a></h4></li>
-        <li><h4><a href="about.html">Our values and beliefs</a></h4></li>
-        <li><h4><a href="about.html">Certifications</a></h4></li>
-        <li><h4><a href="about.html">Product FAQ's</a></h4></li>
-        <li><h4><a href="about.html">Return policy</a></h4></li>
-      </ul>
-    </section>
-    <section>
-      <ul>
-        <li><h3>Contact us</h3></li>
-        <li><h4><a href="contact.html">Customer service</a></h4></li>
-        <li><h4><a href="community.html">Our community</a></h4></li>
-        <li><h2><a href="#"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-youtube"></i></a></li></h2>
-        <li>Follow us on social media and share your adventures!</li>
-      </ul>
-    </section>
-    <section>
-      <ul>
-        <li><img src="assets\images\logo-light.png" alt="logo of Rainy Days" class="logo"></li>
-        <li>Rainy days</li>
-        <li>Sunshine Alley 12,</li>
-        <li>1111 Rainbowville</li>
-        <li>contact@rainydays.com></li>
-        <li>815 493 00</li>
-      </ul>
-    </section>
+  <footer id="footer">
+    <!-- footer content from header-footer.js -->
   </footer>
+  <script type="module" src="/scripts/main.js"></script>
 </body>
