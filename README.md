@@ -37,6 +37,7 @@ User Stories
         Summary with basic product details of all products in the cart and shipping cost, and total cost is calculated. 
 
 - As a user, I want to view an order-confirmation screen after checking out.
+        Order summary shows product image, name, price, quantity, shipping cost and total amount 
 
 
 Required Pages
@@ -63,3 +64,16 @@ This list is a non-exhaustive list of important things to keep in mind before de
 Delivery
 - GitHub repository with JavaScript code in the default (main/master) branch.
 - Written reflection on the CA process delivered as a PDF document.
+
+
+List for further development in the future:
+- Community page
+- Order confirmation page:
+        - Add fictional Order ID
+        - Add summary of shipping adress from the input fields in the checkout form
+- Product functions:
+        - size selector
+        - on sale
+        - picture carousel
+- link from products in cart and checkout back to the product
+- empty all items in cart at once (from cart and checkout)

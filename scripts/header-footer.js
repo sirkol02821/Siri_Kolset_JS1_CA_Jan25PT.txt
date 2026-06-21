@@ -12,6 +12,7 @@ window.addEventListener("load", function (){
                 <i class="fa fa-shopping-cart"></i>
                 <span id="cart-count">0</span>
             </div>
+            <div class="cart-overlay"></div>
             <div class="cartTab">
                 <h1>Shopping cart</h1>
                 <div class="listCart">  
@@ -59,10 +60,10 @@ window.addEventListener ("load", function (){
             <ul>
                 <li><h3>About us</h3></li>
                 <li><h4><a href="about.html">About Rainy Days</a></h4></li>
-                <li><h4><a href="about.html">Our values and beliefs</a></h4></li>
-                <li><h4><a href="about.html">Certifications</a></h4></li>
-                <li><h4><a href="about.html">Product FAQ's</a></h4></li>
-                <li><h4><a href="about.html">Return policy</a></h4></li>
+                <li><h4><a href="#values">Our values and beliefs</a></h4></li>
+                <li><h4><a href="#certifications">Certifications</a></h4></li>
+                <li><h4><a href="#FAQ">Product FAQ's</a></h4></li>
+                <li><h4><a href="#return">Return policy</a></h4></li>
             </ul>
         </section>
         <section>

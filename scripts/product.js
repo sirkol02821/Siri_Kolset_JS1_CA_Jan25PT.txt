@@ -26,26 +26,45 @@ async function loadProductDetails (){
 }
 
 
-      
+/* Showing alert when products are added to cart */
+function showCartToast (){
+    const toast = document.getElementById("cart-toast");
+    if(!toast) return;
+
+    toast.classList.add("show");
+
+    setTimeout (() => {
+        toast.classList.remove("show");
+    }, 2000);
+}
+
+
 /* Selecting which data should be visible on the Product details page. */     
 function displayProductDetails(data) {
     const detailsContainer = document.getElementById("details-container");
 
     detailsContainer.innerHTML = `
-        <img src="${data.image.url}" alt="${data.image.alt}">
-        <h1>${data.title}</h1> 
-        <p class="gender">${data.gender}</p>
-        <p class="price">${data.price} NOK</p>
-        <button id="add-to-cart" class="accent-button">Add to cart</button>
-        <p>${data.description}</p>
-        <a href="/index.html" class="secondary-button">Back to products</a>
+        <div class="product-image">
+            <img src="${data.image.url}" alt="${data.image.alt}" loading="lazy">
+        </div>
+        <div class="product-info">
+            <span class="gender-badge">${data.gender}</span>
+            <h1>${data.title}</h1> 
+            <p class="price">${data.price} NOK</p>
+            <button id="add-to-cart" class="accent-button">Add to cart</button>
+            <div id="cart-toast">Added to cart</div>
+            <div>
+                <h2>Description</h2>
+                <p class="description">${data.description}</p>
+            </div>
+            <a href="/index.html" class="secondary-button">Back to products</a>
+        </div>
     `;
-    const addButton =
-        document.getElementById ("add-to-cart");
-    addButton.addEventListener("click",()=>{
+    const addButton = document.getElementById ("add-to-cart");
+        addButton.addEventListener("click",()=>{
         addToCart(data);
+        showCartToast();
     })
 };
 
 loadProductDetails();
-displayProductDetails();

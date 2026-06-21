@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Versatile, durable raincoats for men and women" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Versatile, durable raincoats for men and women">
   <title>Rainy Days - Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,28 +13,28 @@
 </head>
 <body>
     <header id= "header">
-        <!-- header content from component/header/script.js -->
+        <!-- header content from script/header-footer.js -->
     </header>
     <div class="showCart"></div>
     <img src="assets/images/rainydays-hero.jpg" alt=" Man by a lake looking at Rainy Days logo and slogan: pushing the comfort zone" class="hero-image">
     <main>
         <h1 class="pageTitle">Our products</h1>
-        <div class="filters">What jackets are you looking for?
-            <button data-gender="all">All</button>
-            <button data-gender="Male">Men's</button>
-            <button data-gender="Female">Women's</button>
-        </div>
+        <div>What jackets are you looking for?
+            <div class="filters">
+                <button data-gender="all" class="filter-btn active-filter">All</button>
+                <button data-gender="Male" class="filter-btn">Men's</button>
+                <button data-gender="Female" class="filter-btn">Women's</button>
+            </div>
+        </div>    
         <div class="loader">Loading...</div>
         <div id="product-list" class="product-container">
-            <!-- product-list content fetched from rainydays API -->
-        </div>
-        
+            <!-- product-list content fetched from rainydays API from scripts/main.js -->
+        </div>    
     </main>
     <footer id="footer">
-        <!-- <script src="components/product-list/script.js"></script> -->
+        <!-- <footer content from script/header-footer.js -->
     </footer>
     
-
     <script type="module" src="scripts/main.js"></script>
     <script type="module" src="scripts/cart.js"></script>
     

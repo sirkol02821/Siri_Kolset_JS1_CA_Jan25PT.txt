@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Versatile, durable raincoats for men and women" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Versatile, durable raincoats for men and women">
   <title>Rainy Days - Checkout</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,19 +32,36 @@
                 <h2>Shipping information</h2>
 
                 <label for="fullname">Full name</label>
-                <input id="fullname" type="text" required>
+                <input 
+                    id="fullname" 
+                    type="text" 
+                    required
+                    pattern=".+ +.+"
+                    title="Please write first and last name (e.g. Ola Nordman)">
 
                 <label for="email">Email</label>
-                <input id="email" type="text" required>
+                <input 
+                    id="email"
+                    type="email" 
+                    required>
 
                 <label for="address">Address</label>
-                <input id="address" type="text" required>
+                <input 
+                    id="address" 
+                    type="text" 
+                    required>
 
                 <label for="postal-code">Postal code</label>
-                <input id="postal-code" type="text" required>
+                <input 
+                    id="postal-code" 
+                    type="text" 
+                    required>
 
                 <label for="city">City</label>
-                <input id="city" type="text" required>
+                <input 
+                    id="city" 
+                    type="text" 
+                    required>
 
             </div>
             <div class="payment-info">
@@ -60,17 +77,20 @@
 
                 <div id="card-fields">
                     <label for="card-number">Card Number</label>
-                    <input id="card-number" type="text" placeholder="1234 5678 912 3456">
+                    <input 
+                        id="card-number" 
+                        type="text" 
+                        placeholder="e.g. 1234 5678 912 3456">
 
                     <label for="expiry">Expiry Date</label>
                     <input id="expiry" type="text" placeholder="MM/YY">
 
                     <label for="cvc">CVC</label>
-                    <input id="cvc" type="text" placeholder="123">
+                    <input id="cvc" type="text" placeholder="e.g. 123">
 
                 </div>
             </div>
-            <button type="sumbit">Place Order</button>
+            <button type="submit" class="accent-button">Place Order</button>
         </form>
     </main>
     <footer id="footer">

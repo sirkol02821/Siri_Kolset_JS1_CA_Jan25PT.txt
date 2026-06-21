@@ -18,7 +18,7 @@ function renderProducts(productsToRender) {
 
           /* Setting the innerHTML of each productcard */
         card.innerHTML = `
-          <img src="${data.image.url}" alt="${data.image.alt}">
+          <img src="${data.image.url}" alt="${data.image.alt}" loading="lazy">
           <h3>${data.title}</h3>    
           <p class="gender">${data.gender}</p>
           <p class="price">${data.price} NOK</p>
@@ -70,6 +70,11 @@ document.addEventListener("click", (event) => {
   const filter = event.target.closest("[data-gender]");
 
   if (!filter) return;
+
+  document.querySelectorAll(".filter-btn").forEach(btn =>
+    btn.classList.remove("active-filter")
+  )
+  filter.classList.add("active-filter")
 
   const gender =
     filter.dataset.gender;

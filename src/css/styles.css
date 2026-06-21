@@ -1,14 +1,12 @@
-/* Use import to split up your CSS into manageable chunks */
+/* Importing all other css files */
 @import url("./reset.css");
-/* Files that are only needed to be imported are called partials */
-/* These are marked with an underscore: */
 @import url("./variables.css");
-/* Feel free to add as many of these imports as you need */
 @import url("./header-footer.css");
 @import url("./loader.css");
-@import url("./product-list.css");
+@import url("./index.css");
 @import url("./cart.css");
 @import url("./checkout.css");
+@import url("./product.css");
 
 body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
@@ -23,8 +21,11 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 1000px;
-  margin: 0px 2rem 2rem 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
   text-align: center;
 }
  
@@ -32,10 +33,6 @@ main {
 /* Universal */
 a {
   text-decoration: none;
-}
-
-input, select {
-  color: var(--color-secondary);
 }
 
 
@@ -55,6 +52,13 @@ input, select {
   border: 2px solid var(--color-tertiary);
   border-radius: 5px;
   padding: 10px 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.accent-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .primary-button {
@@ -65,55 +69,32 @@ input, select {
   border-radius: 5px;
   padding: 10px 30px;
 }
+.primary-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
 .secondary-button {
-background-color: var(--color-secondary);
-color: var(--color-primary);
-border: 2px solid var(--color-secondary);
-border-radius: 5px;
-font-style: italic;
-font-weight: bold;
-padding: 10px 30px;
-}
-
-.selected-page {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-
-/* Checkbox-revealed content */
-
-#checkbox-confirmation, .confirmation {
-  display: none;
-  }
-
-#checkbox-confirmation:checked ~ .confirmation {
-  display: block;
-  }
-.confirmation {
-  text-align: center;
-  color: var(--color-accent);
-  border: solid 3px var(--color-accent);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
   border-radius: 5px;
-  padding: 50px 10px;
-  margin-top: 10px; 
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px 30px;
 }
-#checkbox-confirmation .accent-button {
-  margin: 20px 0px;
+.secondary-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-.confirmation .secondary-button {
-  display: inline-flex;
-  margin: 5px;
-}
-
-
 
 /* PAGE SPECIFICITIES */
 
 /** Home page specific **/
 .hero-image {
-  max-width: 100vw;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /** Community page specific **/
@@ -206,88 +187,31 @@ textarea {
   height: 100px;
 }
 
+/* Checkbox-revealed content on "contact us" page*/
 
-/** Product page specific **/
-.product-page {
-  display: flex;
-  flex-direction: column;
-}
-.product-page > * {
-  flex: 1;
-}
-.product-page h3, li, p {
-  text-align: left;
-}
+#checkbox-confirmation, .confirmation {
+  display: none;
+  }
 
-.product-image {
-  width: 100%;
-}
-.product-image__thumbnails {
-  display: flex;
-  max-width: 25%;
-}
-.product-image__thumbnails > * {
-  padding: 0px 2px;
-}
-
-/** Cart page specific **/
-
-.cart-image {
-  margin-top: 30px;
-  max-width: 40%;
-  object-fit: scale-down;
-  border: none;
-  border-radius: 5px;
-}
-.page-title {
-  color: var(--color-tertiary);
+#checkbox-confirmation:checked ~ .confirmation {
+  display: block;
+  }
+.confirmation {
   text-align: center;
-}
-.radio-shipping {
-  display: inline-block;
-  align-self: flex-start;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.cart-summary {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  border: 1px solid var(--color-tertiary);
+  color: var(--color-accent);
+  border: solid 3px var(--color-accent);
   border-radius: 5px;
-  text-align: left;
-  padding: 10px 20px;
-  list-style: none;
-  margin-bottom: 30px;
+  padding: 50px 10px;
+  margin-top: 10px; 
 }
-.cart-summary .primary-button {
+#checkbox-confirmation .accent-button {
+  margin: 20px 0px;
+}
+.confirmation .secondary-button {
   display: inline-flex;
   margin: 5px;
 }
-.radio-shipping {
-  margin-bottom: 30px;
-}
 
-.form-shipping-info {
-  display: grid;
-  grid-template-rows: min-content;
-  row-gap: 5px;
-}
-.form-shipping-info input, select {
-  margin-bottom: 10px;
-}
-
-/** Checkout page specific **/
-.checkout-summary{
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  border: 1px solid var(--color-tertiary);
-  border-radius: 5px;
-  text-align: left;
-  padding: 10px 20px;
-  list-style: none;
-  margin-bottom: 30px;
-}
 
 /** About us page specific **/
 
@@ -303,7 +227,7 @@ textarea {
   text-decoration: underline;
 }
 .about h2 {
-  text-align: left;
+  text-decoration: underline;
 }
 
 
@@ -311,61 +235,8 @@ textarea {
 /* MEDIA QUERIES */
 
 @media (min-width: 600px){
-  header {
-    flex-direction: row;
-  }
-  nav {
-  display: block;
-  position: static;
-  color: #c1cbcd;
-  background: #0a3641;
-  }
-  .hamburger-icon {
-    display: none;
-  }
-  nav ul {
-    padding: 0px;
-  }
-  nav li {
-    display: inline-block
-  }
-  nav a {
-    display: inline-block;
-    color:#c1cbcd;
-  }
   main {
     margin: auto auto 2rem auto;
-  }
-
-  .desktop-2column {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    gap: 20px;
-  }
-  .webshop-layout {
-    grid-template-columns: repeat(3,1fr);
-  }
-  .featured {
-    grid-template-columns: repeat(4,1fr);
-  }
-  .product-page {
-    max-width: 1000px;
-  }
-  .product-desktop1 {
-    display: flex;
-    flex-direction: column;
-  }
-  .product-desktop2 {
-    display: inline-flex;
-  }
-  .product-desktop3 {
-    display: inline-block;
-  }
-  .cart-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
   }
 }
 

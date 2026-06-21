@@ -10,7 +10,13 @@ export function renderOrderSummary(){
 
     if(cart.length === 0) {
         summary.innerHTML =`
-        <p>Your cart is empty.</p
+        <div class="empty-checkout">
+            <i class="fa fa-frown-o" aria-hidden="true"></i>
+            <p>Oh no! Your cart is empty.</p>
+            <p>Luckily our webshop is full of items to put in your cart!</p>
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+            <a href="../../index.html" class="secondary-button">Back to webshop</a>
+        </div>
         `;
         return;
     }
@@ -19,7 +25,7 @@ export function renderOrderSummary(){
     cart.forEach(data => {
         summary.innerHTML +=`
             <div class="order-item">
-                <img src="${data.image.url}" alt="${data.image.alt}">
+                <img src="${data.image.url}" alt="${data.image.alt}" loading="lazy">
                 <div>
                     <h3>${data.title}</h3>
                     <p>${data.quantity} × ${data.price} NOK </p>
@@ -55,13 +61,19 @@ export function updateTotals() {
 renderOrderSummary();
 updateTotals();
 
-/* Remove items from cart once submit aka "place order" button is pressed */
+/* Remove items from cart once submit aka "place order" button is pressed, 
+but save a copy of cart "lastOrder" so info can be displayed on the order confirmation page*/
 document
     .getElementById("checkout-form")
     .addEventListener ("submit", (event) =>{
         event.preventDefault();
+        
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        localStorage.removeItem("cart");
+        localStorage.setItem("lastOrder", JSON.stringify(cart)
+        );
+        
+        localStorage.removeItem ("cart");
 
         window.location.href = "/checkout/confirmation/index.html";
     });

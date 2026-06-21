@@ -1,15 +1,16 @@
 /*    CART TAB    */
 .cartTab {
-  width: 400px;
+  width: 100%;
+  max-width: min(90vw, 400px);
   background-color: var(--color-tertiary);
   color: var(--color-primary);
   border: solid 2px var(--color-tertiary);
   position: fixed;
   inset: 0 -400px 0 auto; /*hides cart (to the right of screen)*/
   display:grid;
-  grid-template-rows: 70px 1fr 70px;
-  transition: 0.4s;
-  z-index: 1000;
+  grid-template-rows: 100px 1fr 70px;
+  transition: right 0.4s ease;
+  z-index: 999;
 }
 
 body.showCart .cartTab{
@@ -20,9 +21,31 @@ body.showCart .cartTab{
   padding: 20px;
   font-weight: normal;
 }
+
+/*Blur background when cart is open*/
+.cart-overlay{
+  position: fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+body.showCart .cart-overlay{
+  opacity:1;
+  visibility: visible;
+}
+
+/*    Checkout and Close buttons    */
 .cartTab .btn {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--color-accent)
+}
+.cartTab .btn a{
+  text-align: center;
+  align-self: center;
 }
 .cartTab .btn button {
   border:none;
@@ -35,15 +58,26 @@ body.showCart .cartTab{
   background-color: var(--color-primary);
 }
 
+
+
 /* Dynamic cart item details*/
+
+
 .cartTab .listCart .item img {
   width: 100%;
 }
+
 .cartTab .listCart .item {
   display:grid;
-  grid-template-columns:70px 150px 50px 1fr;
+  grid-template-columns:70px minmax(100px, 1fr) auto auto;
   gap: 10px;
   text-align: center;
+  align-items: center;
+}
+
+/*Keeping quantity controls together (in case of cart items wrapping)*/
+.quantity{
+  display:flex;
   align-items: center;
 }
 
@@ -76,4 +110,31 @@ body.showCart .cartTab{
 /* Hide scrollbar  */
 .listCart::-webkit-scrollbar{
   width:0;
+}
+
+@media (max-width:480px) {
+  .cartTab .listCart .item {
+    padding: 10px 0px;
+    grid-template-columns: 70px 1fr 1fr;
+    grid-template-areas: 
+      "image title"
+      "image price"
+      "image quantity";
+  }
+  .cartTab .listCart .item img {
+    grid-area: image;
+  }
+  .cartTab .listCart .item h3 {
+    grid-area: title;
+    margin: 0;
+    font-size: 1rem;
+  }
+  .cartTab .listCart .item p {
+    grid-area: price;
+    margin: 0;
+  }
+  .cartTab .listCart .item .quantity {
+    grid-area: quantity;
+    justify-self: center;
+  }
 }

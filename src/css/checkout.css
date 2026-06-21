@@ -20,6 +20,26 @@
     margin-bottom: 2rem;
 }
 
+/*Empty checkout message*/
+.empty-checkout{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 80%;
+    color: darkred;
+    background: #efc7c7;
+    padding: 20px 10px;
+    margin-bottom: 30px;
+    border: solid 3px darkred;
+    border-radius: 12px;
+}
+.empty-checkout a{
+    margin: 30px;
+    background-color: darkred;
+    border:none;
+}
+
+
 /* Order Summary */
 
 .order-summary {
